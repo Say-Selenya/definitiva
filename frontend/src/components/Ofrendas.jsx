@@ -6,12 +6,11 @@ export default function Ofrendas() {
       <h2 className="text-3xl font-bold mb-8">Ofrendas 🔮</h2>
       <p className="text-gray-400 mb-6">Elige tu propina mágica ✨</p>
 
-      {/* Imagen pokebola */}
-      <img
-        src="/imagenes/pokebola.png"
-        alt="Pokebola mágica"
-        className="w-32 h-32 mx-auto mb-8 animate-bounce"
-      />
+   <img 
+  src="/imagenes/pokebola.jpg" 
+  alt="Pokebola mágica" 
+  className="w-32 h-32 mx-auto mb-8 animate-bounce"
+/>
 
       {/* Botones de propinas */}
       <div className="flex flex-wrap justify-center gap-4">
