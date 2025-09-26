@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Intro from "./components/Intro";
 import Ofrendas from "./components/Ofrendas";
+import Ofrendas from "./components/Ofrendas";
 import Tiers from "./components/Tiers";
 import Contacto from "./components/Contacto";
 import Footer from "./components/Footer";
