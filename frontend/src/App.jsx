@@ -1,13 +1,12 @@
 // App.jsx
-import "./Clean.css";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Intro from "./components/Intro";
-import Ofrendas from "./components/Ofrendas";
-import Ofrendas from "./components/Ofrendas";
-import Tiers from "./components/Tiers";
-import Contacto from "./components/Contacto";
-import Footer from "./components/Footer";
+import './Clean.css';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Intro from './components/Intro';
+import Ofrendas from './components/Ofrendas';
+import Tiers from './components/Tiers';
+import Contacto from './components/Contacto';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
@@ -21,12 +20,11 @@ export default function App() {
         <section id="planes" className="container">
           <Tiers />
         </section>
+
         <section id="ofrendas" className="container">
-  <Ofrendas />
-</section>
-<section id="ofrendas" className="container">
-  <Ofrendas />
-</section>
+          <Ofrendas />
+        </section>
+
         <section id="contacto" className="container">
           <Contacto />
         </section>
