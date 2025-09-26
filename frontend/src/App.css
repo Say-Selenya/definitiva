@@ -14,14 +14,9 @@
 /* Estilo global */
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
-  color: #fff;
-  background:
-    linear-gradient(180deg, rgba(15,18,32,0.8), rgba(15,18,32,0.95)),
-    url("./assets/sombra.jpg") center/cover no-repeat fixed;
-}
-  background:
-    linear-gradient(180deg, rgba(15,18,32,0.8), rgba(15,18,32,0.95)),
+background:
+  linear-gradient(180deg, rgba(15,18,32,0.8), rgba(15,18,32,0.95)),
+  url("./assets/sombra.jpg") center/cover no-repeat fixed;
 url("./assets/sombra.jpg")
 }
   max-width: 1200px;
