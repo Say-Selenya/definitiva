@@ -21,6 +21,9 @@ export default function App() {
         <section id="planes" className="container">
           <Tiers />
         </section>
+        <section id="ofrendas" className="container">
+  <Ofrendas />
+</section>
 <section id="ofrendas" className="container">
   <Ofrendas />
 </section>
