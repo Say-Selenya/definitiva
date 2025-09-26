@@ -1,199 +1,72 @@
-/* ================================
-   Zäe Selenya – Tema Cósmico
-   ================================ */
+/* App.css */
 
-/* Tipos y variables */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+/* Variables de colores y estilos */
+:root {
+  --azul-frikilandia: #6ec6ff;
+  --rosa-frikilandia: #ff7eb8;
+  --morado-frikilandia: #9a7cff;
+  --rojo-fuego: #ff4d4d;
 
-:root{
-  --cosmic-bg: #0a0b10;
-  --cosmic-card: rgba(255,255,255,0.06);
-  --cosmic-card-border: rgba(255,255,255,0.18);
-  --cosmic-text: #e9ecf1;
-  --muted: #9aa3af;
-
-  --pink: #ff4d9d;
-  --pink-2:#ff2d88;
-  --aqua: #53ffe7;
-  --violet: #8c7bff;
-
-  --glow: 0 0 25px rgba(140,123,255,.45), 0 0 60px rgba(83,255,231,.25);
+  --oscuro: #0f1220;
+  --claro: #ffffff;
 }
 
-*{box-sizing:border-box}
-html,body,#root{height:100%}
-body{
-  margin:0; background: radial-gradient(1200px 800px at 15% -10%, rgba(83,255,231,.12), transparent 60%) ,
-                      radial-gradient(1200px 800px at 110% 20%, rgba(140,123,255,.12), transparent 55%),
-                      var(--cosmic-bg);
-  color:var(--cosmic-text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+/* Estilo global */
+body {
+  background: var(--oscuro);
+  color: var(--claro);
+  margin: 0;
+  font-family: system-ui, sans-serif;
 }
 
-/* Contenedores */
-.container{width:min(1200px, 92vw); margin-inline:auto}
-.section{padding:72px 0}
-
-.hero {
-  position: relative;
-  min-height: 72vh;
-  display: grid;
-  place-items: center;
-  text-align: center;
-
-  background: linear-gradient(135deg, #ff99ae 0%, #fad0c4 100%),
-              url('/imagenes/sombra.jpg') center/cover no-repeat fixed;
-
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
-.avatar{
-  width:112px; height:112px; border-radius:999px; border:4px solid #fff; display:block; margin:0 auto 14px;
-  box-shadow: var(--glow);
-}
-.title{
-  font-size: clamp(28px, 4vw, 44px); font-weight:800; letter-spacing:.2px;
-  text-shadow: 0 2px 30px rgba(0,0,0,.7);
+/* Contenedor principal */
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 0 1rem;
 }
 
-/* Botón neón */
-.neon-btn{
-  --btn-bg: linear-gradient(90deg, var(--pink), var(--violet));
-  display:inline-flex; align-items:center; gap:.5rem;
-  margin-top:16px; padding:10px 22px; border-radius:999px;
-  color:white; font-weight:700; border:1px solid rgba(255,255,255,.14);
-  background: var(--btn-bg);
-  box-shadow: 0 6px 18px rgba(255,77,157,.35), 0 0 0 1px rgba(255,255,255,.06) inset;
-  transition: transform .15s ease, filter .15s ease;
-}
-.neon-btn:hover{ transform: translateY(-1px); filter: brightness(1.05) saturate(1.03) }
-.neon-btn:active{ transform: translateY(0) scale(.99) }
-
-/* ---------------- Tarjetas / Glass ---------------- */
-.grid{ display:grid; gap:22px }
-.grid--3{ grid-template-columns: repeat(3, minmax(0,1fr)); }
-@media (max-width:990px){ .grid--3{ grid-template-columns: 1fr 1fr } }
-@media (max-width:640px){ .grid--3{ grid-template-columns: 1fr } }
-
-.card{
-  background: var(--cosmic-card);
-  border:1px solid var(--cosmic-card-border);
-  border-radius:22px; padding:20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,.35);
-  backdrop-filter: blur(8px);
-}
-.card h3{ margin:6px 0 8px; font-size:20px }
-.card p{ margin:0; color:var(--muted) }
-
-/* ---------------- Ofrendas ---------------- */
-.donate{
-  display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; margin-top:14px;
-}
-.donate button{
-  padding:8px 14px; border-radius:999px; border:1px solid rgba(255,255,255,.22);
-  background:rgba(255,255,255,.06); color:#fff; font-weight:600; cursor:pointer;
-  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
-}
-.donate button:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 0 0 2px rgba(255,77,157,.45);
-  background: rgba(255,77,157,.18);
-}
-
-/* ---------------- Badges / Píldoras ---------------- */
-.pill{
-  display:inline-flex; align-items:center; gap:.35rem; 
-  padding:.38rem .7rem; border-radius:999px; font-size:.85rem;
-  background: linear-gradient(90deg, rgba(83,255,231,.16), rgba(140,123,255,.16));
-  border:1px solid rgba(255,255,255,.2); color:#eafcff;
-}
-
-/* ---------------- Footer mini ---------------- */
-.footer-mini{
-  border-top:1px solid rgba(255,255,255,.08);
-  padding:26px 0; color:var(--muted); font-size:.92rem;
-}
-.footer-mini .brand{ color:#fff; font-weight:700; letter-spacing:.3px }
-/* Navbar */
-.nav { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(6px); background: rgba(0,0,0,.25); }
-.nav__inner { display:flex; align-items:center; justify-content:space-between; padding:12px 0; }
-.nav__brand { color:#fff; font-weight:800; letter-spacing:.5px; }
-.nav__links { display:flex; gap:.5rem; }
-.nav__links button { background:transparent; border:1px solid rgba(255,255,255,.2); color:#fff; padding:.4rem .75rem; border-radius:999px; cursor:pointer; }
-.nav__links button:hover { background:rgba(255,255,255,.12); }
-
-/* Estructura general */
-.container { width:min(1200px, 92vw); margin-inline:auto; }
-section { padding:72px 0; }
-main { scroll-behavior:smooth; }
-
-/* Reutilizables */
+/* Cards reutilizables */
 .card {
-  background: var(--cosmic-card, rgba(255,255,255,0.06));
-  border: 1px solid var(--cosmic-card-border, rgba(255,255,255,0.18));
-  border-radius: 16px;
+  border-radius: 12px;
   padding: 24px;
-  backdrop-filter: blur(5px);
-  color: #fff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-h1.title { font-size: clamp(28px, 4vw, 44px); font-weight: 800; letter-spacing: .2px; text-shadow: 0 2px 30px rgba(0,0,0,.7); }
-.avatar { width:112px; height:112px; border-radius:9999px; border:4px solid #fff; display:block; margin:0 auto 14px; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
 
-/* Botón */
-.neon-btn {
-  --btn-bg: linear-gradient(90deg, var(--pink, #ff49d9), var(--violet, #8c7bff));
-  display:inline-flex; align-items:center; gap:.5rem;
-  color:white; font-weight:700; border:1px solid rgba(255,255,255,.14);
-  background: var(--btn-bg);
-  box-shadow: 0 6px 18px rgba(255,77,157,.35), 0 0 1px rgba(255,255,255,.06) inset;
-  padding:10px 22px; border-radius:999px; transition: transform .15s ease, filter .15s ease;
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
 }
-.neon-btn:hover { transform: translateY(-1px); filter: brightness(1.05) saturate(1.03); }
 
 /* Tiers */
-.tiers { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:1rem; }
-.price { font-size: 1.75rem; font-weight: 800; margin:.25rem 0 .5rem; }
-
-/* Footer */
-.footer { margin-top:48px; padding:24px 0; border-top: 1px solid rgba(255,255,255,.08); color:#ddd; }
-.footer__inner { display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
-.footer_inner { 
-  display:flex; 
-  justify-content:space-between; 
-  gap:1rem; 
-  flex-wrap:wrap;
+.tier.frikilandia {
+  background: linear-gradient(
+    90deg,
+    var(--azul-frikilandia),
+    var(--rosa-frikilandia)
+  );
 }
 
-/* 👇 Desde la línea 159 empiezas con lo nuevo */
-:root{
-  --azul-frikilandia:#6ec6ff;
-  --rosa-frikilandia:#ff7eb8;
-  --morado-frikilandia:#9a7cff;
-  --rojo-fuego:#ff4d4d;
-
-  --oscuro:#0f1220; 
-  --claro:#ffffff;
+.tier.tragedias {
+  background: radial-gradient(circle at top, #2a2a44, #0b0b14);
 }
 
-body{ 
-  background:var(--oscuro); 
-  color:var(--claro); 
+.tier.kawaii {
+  background: linear-gradient(90deg, #caffbf, #ffd6e0);
+  color: #222;
 }
 
-.tier.frikilandia{ 
-  background: linear-gradient(90deg,var(--azul-frikilandia),var(--rosa-frikilandia)); 
+/* Botones */
+.btn {
+  padding: 0.9rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
-.tier.tragedias{  
-  background: radial-gradient(circle at top, #2a2a44, #0b0b14); 
-}
-.tier.kawaii{     
-  background: linear-gradient(90deg,#caffbf,#ffd6e0); 
-  color:#222; 
-}
-.btn{ 
-  padding:.9rem 1.4rem; 
-  border-radius:999px; 
-  border:1px solid rgba(255,255,255,.25); 
-}
-.neon-btn{ 
-  box-shadow:0 0 18px rgba(255,77,77,.35); 
+
+.neon-btn {
+  box-shadow: 0 0 18px rgba(255, 77, 77, 0.35);
 }
