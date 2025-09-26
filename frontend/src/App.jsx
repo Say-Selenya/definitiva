@@ -1,5 +1,5 @@
 // App.jsx
-import './Clean.css';
+import "./Site.css";
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Intro from './components/Intro';
