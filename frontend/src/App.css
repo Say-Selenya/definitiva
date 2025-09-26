@@ -156,3 +156,44 @@ h1.title { font-size: clamp(28px, 4vw, 44px); font-weight: 800; letter-spacing: 
 /* Footer */
 .footer { margin-top:48px; padding:24px 0; border-top: 1px solid rgba(255,255,255,.08); color:#ddd; }
 .footer__inner { display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
+.footer_inner { 
+  display:flex; 
+  justify-content:space-between; 
+  gap:1rem; 
+  flex-wrap:wrap;
+}
+
+/* 👇 Desde la línea 159 empiezas con lo nuevo */
+:root{
+  --azul-frikilandia:#6ec6ff;
+  --rosa-frikilandia:#ff7eb8;
+  --morado-frikilandia:#9a7cff;
+  --rojo-fuego:#ff4d4d;
+
+  --oscuro:#0f1220; 
+  --claro:#ffffff;
+}
+
+body{ 
+  background:var(--oscuro); 
+  color:var(--claro); 
+}
+
+.tier.frikilandia{ 
+  background: linear-gradient(90deg,var(--azul-frikilandia),var(--rosa-frikilandia)); 
+}
+.tier.tragedias{  
+  background: radial-gradient(circle at top, #2a2a44, #0b0b14); 
+}
+.tier.kawaii{     
+  background: linear-gradient(90deg,#caffbf,#ffd6e0); 
+  color:#222; 
+}
+.btn{ 
+  padding:.9rem 1.4rem; 
+  border-radius:999px; 
+  border:1px solid rgba(255,255,255,.25); 
+}
+.neon-btn{ 
+  box-shadow:0 0 18px rgba(255,77,77,.35); 
+}
