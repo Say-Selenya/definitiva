@@ -1,9 +1,7 @@
 export default function Hero() {
   return (
     <section
-      className="relative w-full h-[70vh] flex items-center justify-center text-center bg-cover bg-center"
-      style={{
-        background: "linear-gradient(135deg, #ff99ae 0%, #fad0c4 100%)",
+style={{ backgroundImage: "url('/imagenes/sombra.jpg')" }}
       }}
     >
       {/* Capa oscura encima de la foto */}
