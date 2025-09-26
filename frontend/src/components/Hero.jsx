@@ -1,9 +1,10 @@
-style={{ background: "linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%)" }}
+export default function Hero() {
   return (
-  <section
-  className="relative w-full h-[70vh] flex items-center justify-center text-center bg-cover bg-center"
-  style={{ background: "linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%)" }}
->
+    <section
+      className="relative w-full h-[70vh] flex items-center justify-center text-center bg-cover bg-center"
+      style={{
+        background: "linear-gradient(135deg, #ff99ae 0%, #fad0c4 100%)",
+      }}
     >
       {/* Capa oscura encima de la foto */}
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -12,7 +13,7 @@ style={{ background: "linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%)" }}
       <div className="relative z-10 text-white">
         {/* Imagen de perfil / logo */}
         <img
-          src="/imagenes/pokebola.png" // Cambia este archivo si quieres otro logo
+          src="/imagenes/pokebola.png" // cambia este archivo si quieres otro logo
           alt="Logo"
           className="w-28 h-28 rounded-full border-4 border-white mx-auto mb-4"
         />
