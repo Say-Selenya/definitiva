@@ -1,38 +1,55 @@
 export default function Tiers() {
   return (
-    <section className="bg-black text-white py-16 px-6 md:px-20">
+    <section className="py-16 px-6 md:px-20">
       <h2 className="text-3xl font-bold text-center mb-12">Entradas Mágicas ✨</h2>
 
       <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
         {/* Frikilandia */}
-        <div className="rounded-2xl border-2 border-blue-500/70 p-6 hover:bg-blue-500/15 transition">
-          <div className="text-4xl mb-2">💙</div>
-          <h3 className="text-xl font-semibold text-blue-400 mb-1">Frikilandia</h3>
-          <p className="text-neutral-300">Mundos frikis y cultura pop.</p>
-          <button className="mt-4 w-full rounded-full bg-white text-black font-semibold py-2 hover:bg-neutral-100 transition">
-            Ver más
-          </button>
+        <div className="card tier frikilandia text-white p-6 rounded-2xl shadow-lg transition">
+          <div className="mb-2 text-2xl">💙</div>
+          <h3 className="text-xl font-semibold mb-2">Frikilandia</h3>
+          <p className="opacity-90">Mundos frikis y cultura pop.</p>
+          <a
+            href="https://ko-fi.com/tu-enlace-frikilandia"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn neon-btn mt-4 bg-white text-black font-semibold inline-block"
+          >
+            Unirme
+          </a>
         </div>
 
         {/* Tragedias de Pesadillas */}
-        <div className="rounded-2xl border-2 border-purple-600/70 p-6 hover:bg-purple-600/15 transition">
-          <div className="text-4xl mb-2">🖤</div>
-          <h3 className="text-xl font-semibold text-purple-300 mb-1">Tragedias de Pesadillas</h3>
-          <p className="text-neutral-300">Oscuridad y emociones profundas.</p>
-          <button className="mt-4 w-full rounded-full bg-white text-black font-semibold py-2 hover:bg-neutral-100 transition">
-            Ver más
-          </button>
+        <div className="card tier tragedias text-white p-6 rounded-2xl shadow-lg transition">
+          <div className="mb-2 text-2xl">🖤</div>
+          <h3 className="text-xl font-semibold mb-2">Tragedias de Pesadillas</h3>
+          <p className="opacity-90">Oscuridad y emociones profundas.</p>
+          <a
+            href="https://ko-fi.com/tu-enlace-tragedias"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn mt-4 bg-white text-black font-semibold inline-block"
+          >
+            Unirme
+          </a>
         </div>
 
         {/* Humor + Arte + Kawaii */}
-        <div className="rounded-2xl border-2 border-green-500/70 p-6 hover:bg-green-500/15 transition">
-          <div className="text-4xl mb-2">💚</div>
-          <h3 className="text-xl font-semibold text-green-400 mb-1">Humor + Arte + Kawaii</h3>
-          <p className="text-neutral-300">Contenido alegre, tierno y artístico.</p>
-          <button className="mt-4 w-full rounded-full bg-white text-black font-semibold py-2 hover:bg-neutral-100 transition">
-            Ver más
-          </button>
+        <div className="card tier kawaii p-6 rounded-2xl shadow-lg transition">
+          <div className="mb-2 text-2xl">💚</div>
+          <h3 className="text-xl font-semibold mb-2">Humor + Arte + Kawaii</h3>
+          <p className="opacity-80">Contenido alegre, tierno y artístico.</p>
+          <a
+            href="https://ko-fi.com/tu-enlace-kawaii"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn mt-4 bg-black text-white font-semibold inline-block"
+          >
+            Unirme
+          </a>
         </div>
+
       </div>
     </section>
   );
