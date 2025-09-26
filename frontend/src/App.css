@@ -12,8 +12,7 @@
 }
 
 /* Estilo global */
-body{
- body {
+body {
   margin: 0;
   font-family: system-ui, sans-serif;
   color: #fff;
@@ -21,8 +20,6 @@ body{
     linear-gradient(180deg, rgba(15,18,32,0.8), rgba(15,18,32,0.95)),
     url("./assets/sombra.jpg") center/cover no-repeat fixed;
 }
-  font-family: system-ui, sans-serif;
-  color: #fff;
   background:
     linear-gradient(180deg, rgba(15,18,32,0.8), rgba(15,18,32,0.95)),
 url("./assets/sombra.jpg")
