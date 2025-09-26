@@ -1,1 +1,2 @@
-
+/* neutral - sin imágenes */
+body{ margin:0; font-family:system-ui, sans-serif; }
