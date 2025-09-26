@@ -1,48 +1,43 @@
 export default function Intro() {
   return (
-    <section className="py-12">
-      <div
-        className="max-w-3xl mx-auto px-4 text-center"
-        style={{
-          background: "rgba(255,255,255,.06)",
-          border: "1px solid rgba(255,255,255,.18)",
-          borderRadius: "20px",
-          padding: "24px",
-          boxShadow: "0 20px 40px rgba(0,0,0,.35)",
-          backdropFilter: "blur(8px)",
-        }}
-      >
-        <h2 className="text-3xl font-bold">La Artista Detrás del Portal</h2>
-        <p className="mt-3 text-gray-300">
-          Bienvenid@ a mi universo creativo. Pinto mundos oníricos, juego con el
-          humor y la oscuridad, y convierto la energía en arte. Este espacio es
-          un portal para sanar, reír y soñar junt@s. 🌙✨
-        </p>
+    <section
+      id="about"
+      className="py-20 bg-gray-900 text-gray-200 px-6"
+    >
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        
+        {/* Imagen / Avatar cósmico */}
+        <div className="flex justify-center">
+          <img
+            src="/alien.png" // 👉 cámbialo por tu imagen/pegatina
+            alt="Alien cósmico"
+            className="w-60 h-60 rounded-full object-cover border-4 border-pink-500 shadow-xl logo-alien"
+          />
+        </div>
 
-        {/* Etiquetas/badges */}
-        <div className="mt-4 flex flex-wrap justify-center gap-2">
-          <span
-            className="px-3 py-1 rounded-full"
-            style={{
-              background:
-                "linear-gradient(90deg, rgba(83,255,231,.16), rgba(140,123,255,.16))",
-              border: "1px solid rgba(255,255,255,.2)",
-              color: "#eafcff",
-            }}
+        {/* Texto de presentación */}
+        <div>
+          <h2 className="text-4xl font-bold text-white mb-6">
+            ✦ Sobre mí ✦
+          </h2>
+          <p className="text-lg leading-relaxed mb-6">
+            Soy <span className="text-pink-400 font-semibold">Zäe Selenya</span>, artista multidisciplinar, 
+            exploradora de lo oculto y creadora de universos cósmicos.  
+            Mi trabajo mezcla <span className="text-pink-300">arte, música y rituales</span> 
+            para invitarte a viajar a otros mundos y conectar con tu propia energía interior. 🌌
+          </p>
+          <p className="text-lg leading-relaxed mb-8">
+            En este portal comparto proyectos, visiones y experiencias que nacen de la conexión 
+            entre lo espiritual y lo creativo. Cada detalle está pensado para abrir puertas 
+            a lo invisible y transformar la percepción del día a día. ✨
+          </p>
+
+          <a
+            href="#proyectos"
+            className="px-6 py-3 bg-pink-600 hover:bg-pink-700 rounded-full font-semibold transition transform hover:scale-105 shadow-lg"
           >
-            Energía & Arte
-          </span>
-          <span
-            className="px-3 py-1 rounded-full"
-            style={{
-              background:
-                "linear-gradient(90deg, rgba(255,77,157,.16), rgba(140,123,255,.16))",
-              border: "1px solid rgba(255,255,255,.2)",
-              color: "#ffe9f4",
-            }}
-          >
-            Onírico & Kawaii
-          </span>
+            Explorar proyectos
+          </a>
         </div>
       </div>
     </section>
