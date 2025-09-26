@@ -1,35 +1,44 @@
-// Hero.jsx
 export default function Hero() {
   return (
-    <div className="hero-avatar">
-  <img src="/imagenes/avatar.jpg" alt="Zäe Selenya" />
-</div>
+    <section
+      id="hero"
+      className="relative flex items-center justify-center min-h-screen text-center text-white px-6"
+      style={{
+        background:
+          "radial-gradient(60% 80% at 20% 20%, rgba(0,0,0,.30) 0, transparent 60%), linear-gradient(135deg, var(--bg1), var(--bg2))",
+      }}
+    >
+      <div className="max-w-3xl mx-auto z-10">
+        {/* Título */}
+        <h1 className="text-5xl md:text-6xl font-extrabold drop-shadow-lg mb-6">
+          ✦ Bienvenid@ al Portal Cósmico ✦
+        </h1>
 
-<h1 className="hero-title title-glow">Zäe Selenya ✦</h1>
-<p className="hero-sub">Portal mágico de arte, energía y creación.</p>
-
-<div style={{ marginTop: 20 }}>
-  <a className="btn-magic" href="#planes">Entrar al Portal</a>
-  <a className="btn-magic" style={{ marginLeft: 10 }} href="#intro">Ver presentación</a>
-</div>    <section className="hero container">
-      <div>
-        <h1 className="hero-title title-glow">Zäe Selenya ✦</h1>
-        <p className="hero-sub">
-          Portal mágico de arte, energía y creación.
+        {/* Subtítulo */}
+        <p className="text-lg md:text-xl text-gray-100 mb-10">
+          Soy <span className="text-pink-400 font-semibold">Zäe Selenya</span>, exploradora de lo místico, 
+          creadora de arte y rituales que conectan mundos 🌌✨
         </p>
 
-        <div style={{ marginTop: 16 }}>
-          <span className="badge badge-blue">fantasy life</span>{" "}
-          <span className="badge badge-pink">kawaii + místico</span>{" "}
-          <span className="badge badge-red">rojo fogoso</span>
-        </div>
-
-        <div style={{ marginTop: 20 }}>
-          <a className="btn-magic" href="#planes">
-            Ver Tiers ✨
+        {/* Botones de acción */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="#proyectos"
+            className="px-6 py-3 bg-pink-600 hover:bg-pink-700 rounded-full font-semibold transition transform hover:scale-105 shadow-lg"
+          >
+            Ver proyectos
+          </a>
+          <a
+            href="#contacto"
+            className="px-6 py-3 bg-transparent border border-white/40 hover:border-pink-400 rounded-full font-semibold transition"
+          >
+            Contáctame
           </a>
         </div>
       </div>
+
+      {/* Efecto de brillo detrás */}
+      <div className="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
     </section>
   );
 }
