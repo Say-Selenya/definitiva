@@ -1,20 +1,44 @@
+import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+
 export default function Navbar() {
-  const go = (id) => {
-    const el = document.querySelector(id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="nav">
-      <div className="nav__inner container">
-        <div className="nav__brand">Zöe Selenya</div>
-        <nav className="nav__links">
-          <button onClick={() => go("#inicio")}>Inicio</button>
-          <button onClick={() => go("#intro")}>Sobre mí</button>
-          <button onClick={() => go("#planes")}>Planes</button>
-          <button onClick={() => go("#contacto")}>Contacto</button>
-        </nav>
+    <nav className="fixed top-0 left-0 w-full z-50 bg-gray-950/80 backdrop-blur-md border-b border-gray-800">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        
+        {/* Logo / Nombre */}
+        <a href="#hero" className="text-xl md:text-2xl font-extrabold text-white tracking-wide hover:text-pink-400 transition">
+          ✦ Zäe Selenya ✦
+        </a>
+
+        {/* Menú desktop */}
+        <div className="hidden md:flex space-x-8 text-gray-300 font-medium">
+          <a href="#about" className="hover:text-pink-400 transition">Sobre mí</a>
+          <a href="#proyectos" className="hover:text-pink-400 transition">Proyectos</a>
+          <a href="#contacto" className="hover:text-pink-400 transition">Contacto</a>
+        </div>
+
+        {/* Botón hamburguesa */}
+        <button
+          className="md:hidden text-white focus:outline-none"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
+        </button>
       </div>
-    </header>
+
+      {/* Menú móvil */}
+      {isOpen && (
+        <div className="md:hidden bg-gray-950/95 backdrop-blur-md border-t border-gray-800">
+          <div className="flex flex-col items-center py-6 space-y-4 text-gray-200 font-medium">
+            <a href="#about" className="hover:text-pink-400 transition" onClick={() => setIsOpen(false)}>Sobre mí</a>
+            <a href="#proyectos" className="hover:text-pink-400 transition" onClick={() => setIsOpen(false)}>Proyectos</a>
+            <a href="#contacto" className="hover:text-pink-400 transition" onClick={() => setIsOpen(false)}>Contacto</a>
+          </div>
+        </div>
+      )}
+    </nav>
   );
 }
