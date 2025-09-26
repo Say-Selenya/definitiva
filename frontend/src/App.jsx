@@ -1,35 +1,38 @@
-// App.jsx
-import "./Site.css";
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Intro from './components/Intro';
-import Ofrendas from './components/Ofrendas';
-import Tiers from './components/Tiers';
-import Contacto from './components/Contacto';
-import Footer from './components/Footer';
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Intro from "./components/Intro";
+import Ofrendas from "./components/Ofrendas";
+import Tiers from "./components/Tiers";
+import Contacto from "./components/Contacto";
+import Footer from "./components/Footer";
 
-export default function App() {
+import "./App.css";
+
+function App() {
   return (
-    <>
+    <div className="app-container">
+      {/* Navbar */}
       <Navbar />
-      <main>
-        <section id="intro" className="container">
-          <Intro />
-        </section>
 
-        <section id="planes" className="container">
-          <Tiers />
-        </section>
+      {/* Hero (portada principal) */}
+      <Hero />
 
-        <section id="ofrendas" className="container">
-          <Ofrendas />
-        </section>
+      {/* Intro / Sobre mí */}
+      <Intro />
 
-        <section id="contacto" className="container">
-          <Contacto />
-        </section>
-      </main>
+      {/* Ofrendas cósmicas */}
+      <Ofrendas />
+
+      {/* Tiers de apoyo */}
+      <Tiers />
+
+      {/* Contacto */}
+      <Contacto />
+
+      {/* Footer */}
       <Footer />
-    </>
+    </div>
   );
 }
+
+export default App;
