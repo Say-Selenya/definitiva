@@ -1,31 +1,24 @@
+// Hero.jsx
 export default function Hero() {
   return (
-    <section
-style={{ backgroundImage: "url('/imagenes/sombra.jpg')" }}
-      }}
-    >
-      {/* Capa oscura encima de la foto */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+    <section className="hero container">
+      <div>
+        <h1 className="hero-title title-glow">Zäe Selenya ✦</h1>
+        <p className="hero-sub">
+          Portal mágico de arte, energía y creación.
+        </p>
 
-      {/* Contenido del Hero */}
-      <div className="relative z-10 text-white">
-        {/* Imagen de perfil / logo */}
-        <img
-          src="/imagenes/pokebola.png" // cambia este archivo si quieres otro logo
-          alt="Logo"
-          className="w-28 h-28 rounded-full border-4 border-white mx-auto mb-4"
-        />
+        <div style={{ marginTop: 16 }}>
+          <span className="badge badge-blue">fantasy life</span>{" "}
+          <span className="badge badge-pink">kawaii + místico</span>{" "}
+          <span className="badge badge-red">rojo fogoso</span>
+        </div>
 
-        {/* Título */}
-        <h1 className="text-4xl font-bold">Zäe Selenya</h1>
-
-        {/* Subtítulo */}
-        <p className="mt-2 text-lg">Bienvenid@ a mi mundo de colores ✨</p>
-
-        {/* Botón */}
-        <button className="mt-4 px-6 py-2 bg-pink-600 hover:bg-pink-700 text-white font-semibold rounded-full transition">
-          SUSCRÍBETE
-        </button>
+        <div style={{ marginTop: 20 }}>
+          <a className="btn-magic" href="#planes">
+            Ver Tiers ✨
+          </a>
+        </div>
       </div>
     </section>
   );
