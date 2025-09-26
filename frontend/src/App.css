@@ -67,3 +67,4 @@ url("/imagenes/sombra.jpg") center/cover no-repeat fixed;
 .neon-btn {
   box-shadow: 0 0 18px rgba(255, 77, 77, 0.35);
 }
+url("./assets/sombra.jpg")
