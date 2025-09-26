@@ -1,34 +1,32 @@
+// Ofrendas.jsx
 export default function Ofrendas() {
-  const amounts = [5, 10, 25, 50, 100];
-
   return (
-    <section className="bg-black text-white py-16 px-6 md:px-20 text-center">
-      <h2 className="text-3xl font-bold mb-8">Ofrendas 🔮</h2>
-      <p className="text-gray-400 mb-6">Elige tu propina mágica ✨</p>
+    <section id="ofrendas" className="container" style={{ marginTop: "3rem" }}>
+      <h2 className="title-glow" style={{ marginBottom: "1.5rem" }}>
+        Mis Ofrendas ✦
+      </h2>
 
-   <img 
-  src="/imagenes/pokebola.jpg" 
-  alt="Pokebola mágica" 
-  className="w-32 h-32 mx-auto mb-8 animate-bounce"
-/>
+      <div className="tiers-grid">
+        {/* Ofrenda 1 */}
+        <article className="tier-card tier--frikilandia glass">
+          <h3 className="title-glow">Luz Celeste 💙</h3>
+          <p>Claridad, inspiración y energía brillante.</p>
+          <a className="btn-magic" href="#contacto">Ver más</a>
+        </article>
 
-      {/* Botones de propinas */}
-      <div className="flex flex-wrap justify-center gap-4">
-        {amounts.map((amount, index) => (
-          <button
-            key={index}
-            className="px-5 py-2 border-2 border-pink-500 text-pink-400 rounded-full hover:bg-pink-600 hover:text-white transition"
-          >
-            {amount} €
-          </button>
-        ))}
-      </div>
+        {/* Ofrenda 2 */}
+        <article className="tier-card tier--tragedias glass">
+          <h3 className="title-glow">Sombras del Umbral 🖤</h3>
+          <p>Profundidad, misterio y conexión interior.</p>
+          <a className="btn-magic" href="#contacto">Ver más</a>
+        </article>
 
-      {/* Opción personalizada */}
-      <div className="mt-6">
-        <button className="px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-full font-semibold hover:opacity-90 transition">
-          Cantidad personalizada
-        </button>
+        {/* Ofrenda 3 */}
+        <article className="tier-card tier--kawaii glass">
+          <h3 className="title-glow">Dulce Energía 💚</h3>
+          <p>Alegría, ternura y arte mágico.</p>
+          <a className="btn-magic" href="#contacto">Ver más</a>
+        </article>
       </div>
     </section>
   );
