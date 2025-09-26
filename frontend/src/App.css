@@ -13,10 +13,12 @@
 
 /* Estilo global */
 body {
-  background: var(--oscuro);
-  color: var(--claro);
   margin: 0;
   font-family: system-ui, sans-serif;
+  color: #ffffff;
+  background:
+    linear-gradient(180deg, rgba(15,18,32,0.8), rgba(15,18,32,0.95)),
+    url("/imagenes/sombra.jpg") center/cover no-repeat fixed;
 }
 
 /* Contenedor principal */
