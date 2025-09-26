@@ -1,6 +1,58 @@
-body{
-  margin:0;
-  font-family:system-ui, sans-serif;
-  color:#fff;
-  background: linear-gradient(180deg,#0f1220,#141831 60%,#0b0d1e);
+/* === clean.css === */
+/* Reset + base limpio y neutral */
+
+/* Elimina márgenes y paddings por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Asegura que html y body ocupen toda la pantalla */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* Tipografía base */
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Imágenes y medios nunca se salen del contenedor */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inputs y botones heredan la tipografía */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Quitar estilos de listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Enlaces limpios */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Botones base */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Tablas limpias */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
