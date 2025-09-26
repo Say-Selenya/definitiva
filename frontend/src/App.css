@@ -37,11 +37,22 @@ body{
 /* ---------------- Hero ---------------- */
 .hero{
   position:relative; min-height:72vh; display:grid; place-items:center; text-align:center;
-  background: url('/imagenes/sombra.jpg') center/cover no-repeat fixed;
-.hero {
+/* -------- Hero ---------- */
+.hero{
   position: relative;
   min-height: 72vh;
   display: grid;
+  place-items: center;
+  text-align: center;
+
+  /* Fondos bonitos sin imagen para que no falle el build */
+  background:
+    radial-gradient(1200px 800px at 15% 10%, rgba(83,255,231,.12), transparent 60%),
+    radial-gradient(1200px 800px at 110% 20%, rgba(140,123,255,.12), transparent 55%),
+    var(--cosmic-bg);
+
+  border-top: 1px solid rgba(255,255,255,.06);
+}
   place-items: center;
   text-align: center;
   background: url('/imagenes/sombra.jpg') center/cover no-repeat fixed;
