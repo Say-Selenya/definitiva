@@ -1,5 +1,13 @@
-export default function Tiers() {
-  return (
+Tiers.jsx  
+──────────────────────────────  
+1  export default function Tiers() {  
+2    return (  
+3      <section className="py-16 px-6 md:px-20">  
+4        <h2 className="text-3xl font-bold text-center mb-12">Entradas Mágicas ✨</h2>  
+5        ...  
+40     </section>  
+41   );  
+42 }
     <section className="py-16 px-6 md:px-20">
       <h2 className="text-3xl font-bold text-center mb-12">Entradas Mágicas ✨</h2>
 
