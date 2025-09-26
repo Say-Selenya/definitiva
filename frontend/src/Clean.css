@@ -1,1 +1,6 @@
-
+body{
+  margin:0;
+  font-family:system-ui, sans-serif;
+  color:#fff;
+  background: linear-gradient(180deg,#0f1220,#141831 60%,#0b0d1e);
+}
