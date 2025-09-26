@@ -49,18 +49,10 @@ body{
   background:
     radial-gradient(1200px 800px at 15% 10%, rgba(83,255,231,.12), transparent 60%),
     radial-gradient(1200px 800px at 110% 20%, rgba(140,123,255,.12), transparent 55%),
-    var(--cosmic-bg);
-
-  border-top: 1px solid rgba(255,255,255,.06);
-}
-  place-items: center;
-  text-align: center;
-  background: url('/imagenes/sombra.jpg') center/cover no-repeat fixed;
-  border-top: 1px solid rgba(255,255,255,0.06);
-}
-  content:""; position:absolute; inset:0;
-  background: linear-gradient(to top, rgba(10,11,16,.85) 10%, rgba(10,11,16,.35) 55%, rgba(10,11,16,.2) 100%);
-  backdrop-filter: blur(1.5px);
+  /* Fondos bonitos sin imagen para que no falle el build */
+background: radial-gradient( ... );
+background: url('/imagenes/sombra.jpg') center/cover no-repeat fixed;  /* <- QUITAR ESTA LÍNEA */
+border-top: 1px solid rgba(255,255,255,.06);
 }
 .hero__inner{ position:relative; z-index:2 }
 .avatar{
