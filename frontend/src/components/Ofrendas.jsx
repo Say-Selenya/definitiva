@@ -1,83 +1,60 @@
-// Ofrendas.jsx
 export default function Ofrendas() {
+  const items = [
+    {
+      titulo: "Ritual Lunar",
+      desc: "Un viaje guiado con piedras, velas y energía cósmica para armonizar tus chakras.",
+      img: "/ritual-lunar.jpg",
+    },
+    {
+      titulo: "Amuleto Cósmico",
+      desc: "Creado a mano con piedras estelares y símbolos galácticos. Conexión y protección.",
+      img: "/amuleto-cosmico.jpg",
+    },
+    {
+      titulo: "Sesión Reiki",
+      desc: "Energía sanadora para desbloquear y equilibrar tu cuerpo y mente.",
+      img: "/reiki.jpg",
+    },
+    {
+      titulo: "Arte Visionario",
+      desc: "Obras que mezclan lo místico y lo estético, un portal a otros mundos.",
+      img: "/arte-visionario.jpg",
+    },
+  ];
+
   return (
-    <section id="ofrendas" className="container" style={{ marginTop: "3rem" }}>
-      <h2 className="title-glow" style={{ marginBottom: "1.5rem" }}>
-        Mis Ofrendas ✦
-body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
-  color: #fff;
-  background: linear-gradient(180deg, #0f1220, #141831 60%, #0b0d1e);
-}
+    <section id="ofrendas" className="py-20 bg-gray-900 text-gray-100 px-6">
+      <div className="max-w-6xl mx-auto text-center mb-12">
+        <h2 className="text-4xl font-bold text-white mb-4">
+          ✦ Ofrendas Cósmicas ✦
+        </h2>
+        <p className="text-gray-400">
+          Cada ofrenda es un puente entre lo visible y lo invisible.  
+          Elige la que resuene con tu alma 🌌
+        </p>
+      </div>
 
-/* --- Ofrendas --- */
-#ofrendas {
-  text-align: center;
-  margin: 3rem auto;
-  padding: 2rem;
-}
-
-.tiers-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.tier-card {
-  padding: 2rem;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.tier-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.6);
-}
-
-.title-glow {
-  font-size: 1.5rem;
-  text-shadow: 0 0 8px #fff, 0 0 15px #6c63ff, 0 0 30px #ff6ec7;
-}
-
-.btn-magic {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.7rem 1.4rem;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #6c63ff, #ff6ec7);
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: transform 0.2s ease;
-}
-
-.btn-magic:hover {
-  transform: scale(1.1);
-}
-      <div className="tiers-grid">
-        {/* Ofrenda 1 */}
-        <article className="tier-card tier--frikilandia glass">
-          <h3 className="title-glow">Luz Celeste 💙</h3>
-          <p>Claridad, inspiración y energía brillante.</p>
-          <a className="btn-magic" href="#contacto">Ver más</a>
-        </article>
-
-        {/* Ofrenda 2 */}
-        <article className="tier-card tier--tragedias glass">
-          <h3 className="title-glow">Sombras del Umbral 🖤</h3>
-          <p>Profundidad, misterio y conexión interior.</p>
-          <a className="btn-magic" href="#contacto">Ver más</a>
-        </article>
-
-        {/* Ofrenda 3 */}
-        <article className="tier-card tier--kawaii glass">
-          <h3 className="title-glow">Dulce Energía 💚</h3>
-          <p>Alegría, ternura y arte mágico.</p>
-          <a className="btn-magic" href="#contacto">Ver más</a>
-        </article>
+      {/* Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        {items.map((item, idx) => (
+          <div
+            key={idx}
+            className="card bg-gray-800/50 border border-gray-700 rounded-xl shadow-lg overflow-hidden hover:scale-105 transform transition"
+          >
+            <img
+              src={item.img}
+              alt={item.titulo}
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-6">
+              <h3 className="text-xl font-semibold text-pink-400 mb-3">
+                {item.titulo}
+              </h3>
+              <p className="text-gray-300 text-sm mb-4">{item.desc}</p>
+              <button className="btn w-full">Descubrir ✨</button>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
