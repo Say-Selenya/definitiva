@@ -1,18 +1,49 @@
 export default function Intro() {
   return (
-    <section className="bg-gray-900 text-white py-16 px-6 md:px-20">
-      <div className="max-w-3xl mx-auto text-center">
-        <img
-          src="/imagenes/avatar.jpg"
-          alt="Avatar"
-          className="w-28 h-28 rounded-full border-4 border-pink-500 mx-auto mb-6"
-        />
-        <h2 className="text-3xl font-bold mb-4">La Artista Detrás del Portal</h2>
-        <p className="text-lg leading-relaxed text-gray-300">
-          Este santuario será mi templo galáctico: luces, cámara, materiales para crear
-          contenido visual, sensual y mágico. Con tu ayuda, podré ofrecer contenido brutal,
-          curaciones energéticas y vivir de lo que me apasiona. 🌌💜
+    <section className="py-12">
+      <div
+        className="max-w-3xl mx-auto px-4 text-center"
+        style={{
+          background: "rgba(255,255,255,.06)",
+          border: "1px solid rgba(255,255,255,.18)",
+          borderRadius: "20px",
+          padding: "24px",
+          boxShadow: "0 20px 40px rgba(0,0,0,.35)",
+          backdropFilter: "blur(8px)",
+        }}
+      >
+        <h2 className="text-3xl font-bold">La Artista Detrás del Portal</h2>
+        <p className="mt-3 text-gray-300">
+          Bienvenid@ a mi universo creativo. Pinto mundos oníricos, juego con el
+          humor y la oscuridad, y convierto la energía en arte. Este espacio es
+          un portal para sanar, reír y soñar junt@s. 🌙✨
         </p>
+
+        {/* Etiquetas/badges */}
+        <div className="mt-4 flex flex-wrap justify-center gap-2">
+          <span
+            className="px-3 py-1 rounded-full"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(83,255,231,.16), rgba(140,123,255,.16))",
+              border: "1px solid rgba(255,255,255,.2)",
+              color: "#eafcff",
+            }}
+          >
+            Energía & Arte
+          </span>
+          <span
+            className="px-3 py-1 rounded-full"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(255,77,157,.16), rgba(140,123,255,.16))",
+              border: "1px solid rgba(255,255,255,.2)",
+              color: "#ffe9f4",
+            }}
+          >
+            Onírico & Kawaii
+          </span>
+        </div>
       </div>
     </section>
   );
